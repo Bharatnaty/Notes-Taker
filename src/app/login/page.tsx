@@ -30,7 +30,7 @@ export default function Login() {
       <input placeholder="Email" type="email" value={email} onChange={e => setEmail(e.target.value)} />
       <input placeholder="Password" type="password" value={password} onChange={e => setPassword(e.target.value)} />
       <button onClick={handleLogin}>Login</button>
-      <button onClick={() => router.push('/signup')}>Register Page</button>
+      <button onClick={() => router.push('/signup')}>Register</button>
 
       {error && <p style={{ color: 'red' }}>{error}</p>}
     </div>
