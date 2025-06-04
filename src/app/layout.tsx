@@ -1,20 +1,20 @@
-"use client"
-
+// src/app/layout.tsx
+import ClientWrapper from '@/component/ClientWrapper'
 import './globals.css'
 import { ReactNode } from 'react'
-import { Provider } from 'react-redux'
-import { store } from '../redux/store'
-import Header from '@/component/Header'
-import { AuthInit } from '@/component/AuthInit'
+
+export const metadata = {
+  title: 'Notes Taker',
+  description: 'Notes Taker with redux, nextjs, crud operation',
+}
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
       <body>
-        <Provider store={store}>
-          <AuthInit/>
-          <Header/>
-          {children}</Provider>
+        <ClientWrapper>
+          {children}
+        </ClientWrapper>
       </body>
     </html>
   )
